@@ -65,12 +65,12 @@ with col1:
             st.metric("Precio medio", "N/A")
 
 with col2:
-    st.write("Últimas filas del dataset filtrado")
+    st.write("Primeras filas del dataset")
     st.dataframe(df_filtered.head())
 
 # Mostrar tabla si se seleccionó
 if show_table:
-    st.subheader("Tabla de datos filtrada")
+    st.subheader("Tabla de datos")
     st.dataframe(df_filtered)
 
 # Histograma
