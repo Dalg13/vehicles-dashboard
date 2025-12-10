@@ -9,7 +9,7 @@ st.title("Panel de Control - Anuncios de Vehículos Usados")
 st.markdown("Explora un conjunto de anuncios con filtros interactivos y gráficos.")
 
 @st.cache_data
-def load_data(path: str = "data/vehicles_us.csv") -> pd.DataFrame:
+def load_data(path: str = "vehicles_us.csv") -> pd.DataFrame:
     """Carga el CSV y realiza limpiezas básicas."""
     df = pd.read_csv(path)
     # Normalizar nombres de columnas sencillos si hace falta
@@ -20,7 +20,7 @@ def load_data(path: str = "data/vehicles_us.csv") -> pd.DataFrame:
 try:
     df = load_data()
 except FileNotFoundError:
-    st.error("No se encontró el archivo data/vehicles_us.csv. Asegúrate de colocarlo en la carpeta data/.")
+    st.error("No se encontró el archivo vehicles_us.csv. Asegúrate de colocarlo en la carpeta del entorno.")
     st.stop()
 # Sidebar - filtros
 st.sidebar.header("Filtros")
