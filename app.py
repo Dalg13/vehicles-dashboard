@@ -91,5 +91,4 @@ if show_scatter:
     else:
         st.warning("Las columnas 'odometer' y/o 'price' no están presentes en el dataset.")
 
-st.markdown("---")
-st.write("Hecho con ❤️ — Puedes personalizar y añadir más visualizaciones.")
+
